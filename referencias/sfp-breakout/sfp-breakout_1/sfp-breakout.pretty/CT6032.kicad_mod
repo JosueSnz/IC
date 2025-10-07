@@ -1,0 +1,219 @@
+(footprint "CT6032"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "TANTALUM CAPACITOR")
+	(property "Reference" "REF**"
+		(at -2.54 -1.905 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "7b0f303b-8098-4f63-a669-2f78c6b4e57a")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "CT6032"
+		(at -2.54 3.175 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "a2017fc5-1f88-4dce-b252-14d6587ded75")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d4dc59ce-4637-483b-a5cc-6490d7321780")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "158de731-4ef0-4aea-b144-0ef4a6f9574e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "86c1bfd1-aaef-404c-bad2-0fd0e0876859")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_poly
+		(pts
+			(xy -0.5001 1) (xy 0.5001 1) (xy 0.5001 -1) (xy -0.5001 -1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill solid)
+		(layer "F.Adhes")
+		(uuid "bb364ea8-6ebd-4d7b-b261-06c898aad559")
+	)
+	(fp_line
+		(start -4.473 -1.983)
+		(end 4.473 -1.983)
+		(stroke
+			(width 0.0508)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "7db66f66-4a10-486e-9063-7ac6652ff66a")
+	)
+	(fp_line
+		(start -4.473 1.983)
+		(end -4.473 -1.983)
+		(stroke
+			(width 0.0508)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "6a744d95-869e-484f-b42c-637cb6fd7d19")
+	)
+	(fp_line
+		(start 4.473 -1.983)
+		(end 4.473 1.983)
+		(stroke
+			(width 0.0508)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "fdedae5c-a774-4e50-ae3a-d83e59713244")
+	)
+	(fp_line
+		(start 4.473 1.983)
+		(end -4.473 1.983)
+		(stroke
+			(width 0.0508)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "c6522c58-3d65-4aa0-9a30-cd584af54e83")
+	)
+	(fp_line
+		(start -3.073 -1.067)
+		(end -3.073 1.067)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ff8bc5a2-e361-4cdf-bdb5-e7023febb3f6")
+	)
+	(fp_line
+		(start -2.932 1.637)
+		(end -2.932 -1.637)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4e209c92-80de-4e7f-b937-d9a161dc6d68")
+	)
+	(fp_line
+		(start -1.8 -0.63)
+		(end -1.8 0.64)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "453d0d73-2345-4eb9-9dba-0413a0fcf2ca")
+	)
+	(fp_line
+		(start -1.18 0)
+		(end -2.45 0)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "152f1c50-fcb0-43a5-9ad6-4b8d4d27c454")
+	)
+	(fp_line
+		(start 2.957 -1.637)
+		(end -2.932 -1.637)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "512a4576-21b2-467a-bae3-5c2b760c752e")
+	)
+	(fp_line
+		(start 2.957 1.637)
+		(end -2.932 1.637)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "67504c90-8e93-4c66-b393-1b5bb90e11cf")
+	)
+	(fp_line
+		(start 2.957 1.637)
+		(end 2.957 -1.637)
+		(stroke
+			(width 0.2032)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a1710372-9173-4248-a3b5-67c5f290e611")
+	)
+	(fp_line
+		(start 3.073 -1.067)
+		(end 3.073 1.067)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1d2fe9e6-da2c-486b-95ed-0ed8de277a3f")
+	)
+	(pad "+" smd roundrect
+		(at -2.5 0)
+		(size 2.6 2.2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.09236363636)
+		(solder_paste_margin -0.0762)
+		(thermal_bridge_angle 0)
+		(uuid "3e55e76f-7b05-406a-b646-774a62498bb9")
+	)
+	(pad "-" smd roundrect
+		(at 2.5 0)
+		(size 2.6 2.2)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.09236363636)
+		(solder_paste_margin -0.0762)
+		(thermal_bridge_angle 0)
+		(uuid "664db4df-e424-4eb3-967e-187cefd85c72")
+	)
+)

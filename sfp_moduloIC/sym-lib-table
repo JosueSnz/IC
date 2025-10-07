@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "rtl8213b")(type "KiCad")(uri "${KIPRJMOD}/lib/rtl8213b/rtl8213b.kicad_sym")(options "")(descr ""))
+)

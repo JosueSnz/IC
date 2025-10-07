@@ -1,0 +1,16 @@
+(version 1)
+(rule "class 1:1"
+  (condition "A.NetClass == 'lvds' && B.NetClass == 'lvds'")
+  (constraint clearance (min 0.25mm)))
+
+(rule "class 2:1"
+  (condition "A.NetClass == 'GND-Polys' && B.NetClass == 'lvds'")
+  (constraint clearance (min 0.6mm)))
+
+(rule "class 3:1"
+  (condition "A.NetClass == 'supply' && B.NetClass == 'lvds'")
+  (constraint clearance (min 0.0381mm)))
+
+(rule "class 3:2"
+  (condition "A.NetClass == 'supply' && B.NetClass == 'GND-Polys'")
+  (constraint clearance (min 0.5mm)))
