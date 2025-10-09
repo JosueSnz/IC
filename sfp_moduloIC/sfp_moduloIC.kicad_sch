@@ -2338,7 +2338,7 @@
 	)
 	(symbol
 		(lib_id "rtl8213b:RTL8213B-CG")
-		(at 135.89 76.2 0)
+		(at 157.48 83.82 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2347,7 +2347,7 @@
 		(fields_autoplaced yes)
 		(uuid "813bfcbc-53da-412a-82f6-417e3888ebca")
 		(property "Reference" "U1"
-			(at 153.3241 46.99 0)
+			(at 174.9141 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2356,7 +2356,7 @@
 			)
 		)
 		(property "Value" "RTL8213B-CG"
-			(at 153.3241 49.53 0)
+			(at 174.9141 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2365,7 +2365,7 @@
 			)
 		)
 		(property "Footprint" "Package_DFN_QFN:QFN-40-1EP_5x5mm_P0.4mm_EP3.8x3.8mm_ThermalVias"
-			(at 177.8 64.77 0)
+			(at 199.39 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2374,7 +2374,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 177.8 64.77 0)
+			(at 199.39 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2383,7 +2383,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 177.8 64.77 0)
+			(at 199.39 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2525,7 +2525,7 @@
 	)
 	(symbol
 		(lib_id "Interface_Ethernet:W5500")
-		(at 50.8 86.36 0)
+		(at 80.01 78.74 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2534,7 +2534,7 @@
 		(fields_autoplaced yes)
 		(uuid "c7bb1b3e-b6c5-44d1-b7f5-c25ec34507a7")
 		(property "Reference" "U2"
-			(at 55.5341 53.34 0)
+			(at 84.7441 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2543,7 +2543,7 @@
 			)
 		)
 		(property "Value" "W5500"
-			(at 55.5341 55.88 0)
+			(at 84.7441 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2552,7 +2552,7 @@
 			)
 		)
 		(property "Footprint" "Package_QFP:LQFP-48_7x7mm_P0.5mm"
-			(at 50.8 44.45 0)
+			(at 80.01 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2561,7 +2561,7 @@
 			)
 		)
 		(property "Datasheet" "http://wizwiki.net/wiki/lib/exe/fetch.php/products:w5500:w5500_ds_v109e.pdf"
-			(at 50.8 60.96 0)
+			(at 80.01 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2570,7 +2570,7 @@
 			)
 		)
 		(property "Description" "10/100Mb SPI Ethernet controller with TCP/IP stack, LQFP-48"
-			(at 50.8 86.36 0)
+			(at 80.01 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
