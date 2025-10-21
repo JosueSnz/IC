@@ -11,7 +11,7 @@
 
 IPAddress ip(192, 168, 0, 15);    // *** CHANGE THIS to something relevant for YOUR LAN. ***
 IPAddress subnet(255, 255, 255, 0);   // Subnet mask.
-//IPAddress eth_DNS(192, 168, 1, 1);    // *** CHANGE THIS to match YOUR DNS server.           ***
+IPAddress eth_DNS(192, 168, 1, 1);    // *** CHANGE THIS to match YOUR DNS server.           ***
 IPAddress gateway(192, 168, 0, 1);   // *** CHANGE THIS to match YOUR Gateway (router).     ***
 
 

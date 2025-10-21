@@ -1,28 +1,55 @@
-#include <Arduino.h>
-#include <SPI.h>
-#include <EthernetESP32.h>
-#include "local_config.h"
+/*
+ Web Server
 
-EthernetServer server(80); 
+ A simple web server that shows the value of the analog input pins.
+ using an Arduino WIZnet Ethernet shield.
+
+ Circuit:
+ * Ethernet shield attached to pins 10, 11, 12, 13
+ * Analog inputs attached to pins A0 through A5 (optional)
+
+ created 18 Dec 2009
+ by David A. Mellis
+ modified 9 Apr 2012
+ by Tom Igoe
+ modified 02 Sept 2015
+ by Arturo Guadalupi
+ 
+ */
+
+#include <SPI.h>
+#include <Ethernet.h>
+
+// Enter a MAC address and IP address for your controller below.
+// The IP address will be dependent on your local network:
+byte mac[] = {
+  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED
+};
+IPAddress ip(192, 168, 1, 177);
+
+// Initialize the Ethernet server library
+// with the IP address and port you want to use
+// (port 80 is default for HTTP):
+EthernetServer server(80);
 
 void setup() {
   // You can use Ethernet.init(pin) to configure the CS pin
   //Ethernet.init(10);  // Most Arduino shields
-  Ethernet.init(5);   // MKR ETH Shield
+  //Ethernet.init(5);   // MKR ETH Shield
   //Ethernet.init(0);   // Teensy 2.0
   //Ethernet.init(20);  // Teensy++ 2.0
   //Ethernet.init(15);  // ESP8266 with Adafruit FeatherWing Ethernet
   //Ethernet.init(33);  // ESP32 with Adafruit FeatherWing Ethernet
 
   // Open serial communications and wait for port to open:
-  Serial.begin(115200);
+  Serial.begin(9600);
   while (!Serial) {
     ; // wait for serial port to connect. Needed for native USB port only
   }
   Serial.println("Ethernet WebServer Example");
 
-  // start the Ethernet connection and the server: mac, ip, eth_DNS, gateway
-  Ethernet.begin(mac, ip, eth_DNS, gateway);
+  // start the Ethernet connection and the server:
+  Ethernet.begin(mac, ip);
 
   // Check for Ethernet hardware present
   if (Ethernet.hardwareStatus() == EthernetNoHardware) {
@@ -39,9 +66,6 @@ void setup() {
   server.begin();
   Serial.print("server is at ");
   Serial.println(Ethernet.localIP());
-
-  pinMode(22, OUTPUT);
-  pinMode(15, INPUT);
 }
 
 
@@ -68,28 +92,13 @@ void loop() {
           client.println();
           client.println("<!DOCTYPE HTML>");
           client.println("<html>");
-
           // output the value of each analog input pin
-
-          for (int toggle=0; toggle<6; toggle++){
-            if(toggle==2){
-              digitalWrite(22, HIGH);
-              client.print(digitalRead(22));
-              client.println("<br />");
-              delay(500);
-            }
-            else{
-              digitalWrite(22, LOW);
-              client.print(digitalRead(22));
-              client.println("<br />"); 
-            }
-          }
-          // true
-          for (int analogChannel = 0; analogChannel < 6; analogChannel++) {     
-            int sensorReading = analogRead(15);
-            float tensao= (3.3/4095)*sensorReading*0.766665;
-            client.print("Tensao medida: ");
-            client.print(tensao);
+          for (int analogChannel = 0; analogChannel < 6; analogChannel++) {
+            int sensorReading = analogRead(analogChannel);
+            client.print("analog input ");
+            client.print(analogChannel);
+            client.print(" is ");
+            client.print(sensorReading);
             client.println("<br />");
           }
           client.println("</html>");
@@ -105,9 +114,9 @@ void loop() {
       }
     }
     // give the web browser time to receive the data
-    delay(100);
+    delay(1);
     // close the connection:
-    // client.stop();
-    // Serial.println("client disconnected");
+    client.stop();
+    Serial.println("client disconnected");
   }
 }
