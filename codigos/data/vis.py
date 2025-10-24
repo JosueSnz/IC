@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from matplotlib.dates import DateFormatter, MinuteLocator
 
-# --- Configurações ---
 DB_FILE = "micro_data.db"
 INTERVALO_MS = 1000
 MAX_PONTOS = 60 
@@ -32,26 +31,22 @@ def animate(i):
         correntes = []
 
         for row in rows:
-            # Converte a string de timestamp de volta para objeto datetime
             times.append(datetime.strptime(row[0], '%Y-%m-%d %H:%M:%S.%f'))
             tensoes.append(row[1])
             correntes.append(row[2])
-
-        # --- PLOTAGEM ---
         
         ax1.clear()
         ax1.plot(times, tensoes, color='blue', label='Tensão Medida [V]')
         ax1.set_title('Monitoramento em Tempo Real')
-        ax1.set_ylabel('Tensão (V)')
+        ax1.set_ylabel('Tensão [V]')
         ax1.grid(True, linestyle='--', alpha=0.6)
         
         ax2.clear()
         ax2.plot(times, correntes, color='red', label='Corrente Calculada [A]')
-        ax2.set_ylabel('Corrente (A)')
+        ax2.set_ylabel('Corrente [A]')
         ax2.set_xlabel('Tempo')
         ax2.grid(True, linestyle='--', alpha=0.6)
         
-        # Define o formato do tempo para HORA:MINUTO:SEGUNDO
         date_form = DateFormatter('%H:%M:%S')
         ax1.xaxis.set_major_formatter(date_form)
         ax2.xaxis.set_major_formatter(date_form)

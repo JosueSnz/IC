@@ -37,8 +37,8 @@ void setup() {
   // }
   Serial.println("Iniciando");
 
-  // Adicionar DNS e gateway para conexão ,eth_DNS, gateway
-  Ethernet.begin(mac, ip, eth_DNS, gateway, subnet);
+  // Adicionar DNS e gateway para conexão ,eth_DNS, gateway  , ip, eth_DNS, gateway, subnet
+  Ethernet.begin(mac);
 
   // Checagem de Hardware
   if (Ethernet.hardwareStatus() == EthernetNoHardware) {

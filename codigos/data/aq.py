@@ -4,7 +4,7 @@ import time
 from datetime import datetime
 
 # --- Configurações ---
-URL = "http://192.168.1.104:8000"  #colocar o ip certo
+URL = "2adf3f59fd3d4f59a45b94dd1809ffcd.s1.eu.hivemq.cloud:8883"  #colocar o ip certo
 DB_FILE = "micro_data.db"         
 
 # --- Funções do Banco de Dados ---

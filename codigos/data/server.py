@@ -157,7 +157,6 @@ if __name__ == "__main__":
     print("Pressione Ctrl+C para parar o servidor.")
 
     try:
-        # Usa 'http.server.ThreadingHTTPServer' para lidar com múltiplas requisições mais facilmente
         with socketserver.ThreadingTCPServer((HOST, PORT), MyRequestHandler) as httpd:
             httpd.serve_forever()
     except KeyboardInterrupt:
