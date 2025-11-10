@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "MOV-10D560KKTR"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2023-12-01-09:57:19)
+    (mountForm default
+        (footprintRef "MOV10D560KKTR")
+        (spec "System")
+    )
+)

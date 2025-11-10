@@ -1,0 +1,16 @@
+.SRN3015-2R2M :1 ;Power Inductor semi-shielded SMD 2.2uH Bourns SRN3015 Series Shielded Wire-wound SMD Inductor with a Ferrite Core, 2.2 uH +/-20% 1.8A Idc
+INDPM3027X150L
+*STM L
+*NGS
+*PLB 1="1" 2="2"
+*MXP 2
+*DFN SRN3015-2R2M
+~!Mouser Part Number (652-SRN3015-2R2M)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Bourns/SRN3015-2R2M?qs=opBjA1TV9012ipbB8adgog%3D%3D)
+~!Manufacturer_Name (Bourns)
+~!Manufacturer_Part_Number (SRN3015-2R2M)
+~!Link Datasheet (-)
+~!Height (1.5mm)
+~!3D_Model (SRN3015-2R2M)
+SRN3015-2R2M
+1.1!U 2.1!U 

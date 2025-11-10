@@ -37,12 +37,14 @@ def animate(i):
         
         ax1.clear()
         ax1.plot(times, tensoes, color='blue', label='Tensão Medida [V]')
+        ax1.set_ylim(0,2.5)
         ax1.set_title('Monitoramento em Tempo Real')
         ax1.set_ylabel('Tensão [V]')
         ax1.grid(True, linestyle='--', alpha=0.6)
         
         ax2.clear()
         ax2.plot(times, correntes, color='red', label='Corrente Calculada [A]')
+        ax2.set_ylim(-60,60)
         ax2.set_ylabel('Corrente [A]')
         ax2.set_xlabel('Tempo')
         ax2.grid(True, linestyle='--', alpha=0.6)

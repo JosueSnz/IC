@@ -1,0 +1,70 @@
+(Japanese_coding: sjis)
+(function "ECS_12289863"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2020-06-12-16:56:29)
+    (utime 2024-05-03-07:08:43)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+        (port "3" (symbPinId 3) (portType INOUT))
+    )
+    (property "symbolName" "YK4410303000G")
+)
+
+
+(pinAssign "ECS_12289863"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2020-06-12-16:56:29)
+    (utime 2024-05-03-07:08:43)
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+        (port "3" (symbPinId 3) (portName "3") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_12289863")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+                (port "3" (match "3"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "YK4410303000G")
+)
+
+
+(part "YK4410303000G"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2020-06-12-16:56:29)
+    (utime 2024-05-03-07:08:43)
+    (packageRef "YK4410303000G")
+    (pinAssignRef "ECS_12289863")
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+        (port "3" (symbPinId 3) (portName "3") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "YES")
+    (property "refDesPrefix" "J")
+    (property "description" "3 Circuit 0.374\" (9.50mm) Barrier Block Connector Screws with Captive Plate")
+    (property "Mouser_Part_Number" "649-YK44103030J0G")
+    (property "Mouser_Price/Stock" "https://www.mouser.co.uk/ProductDetail/Amphenol-Anytek/YK4410303000G?qs=Mv7BduZupUjlRBXbQE4gEA%3D%3D")
+    (property "Manufacturer_Name" "Amphenol")
+    (property "Manufacturer_Part_Number" "YK4410303000G")
+    (property "Datasheet_Link" "http://www.anytek.com.tw/UserUpFiles/20170613/GymcEQdigCSS.pdf")
+    (property "compAreaTopHeight" 14.5)
+)
+
+

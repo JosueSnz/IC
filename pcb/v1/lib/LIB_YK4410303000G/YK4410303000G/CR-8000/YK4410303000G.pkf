@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "YK4410303000G"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "YK4410303000G")
+        (spec "default")
+    )
+)

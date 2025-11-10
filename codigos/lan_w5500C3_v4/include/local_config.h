@@ -7,8 +7,9 @@ byte mac[] = {0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED};
 #define RESET_P 10
 #define CS_PIN 7 
 
+// broker.hivemq.com
 
-const char* mqttServer = "broker.hivemq.com"; 
+const char* mqttServer = "test.mosquitto.org"; 
 const int mqttPort = 1883; 
 const char* mqttUser = "";    
 const char* mqttPassword = "";

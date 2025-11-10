@@ -1,0 +1,9 @@
+Manufacturer=Bourns
+PartNumber=SRN6045TA-150M
+PartCategory=Inductor
+PackageCategory=Inductors Chip
+PinCount=2
+Version=1.1
+Released=2017-01-10 23:04:44
+Downloaded=2025-11-01 03:29:32
+3D=Y

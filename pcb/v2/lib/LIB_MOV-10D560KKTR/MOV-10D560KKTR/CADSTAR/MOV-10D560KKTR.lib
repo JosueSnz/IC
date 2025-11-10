@@ -1,0 +1,16 @@
+.MOV-10D560KKTR :1 ;VARISTOR, MOV, 110V, DISC 10MM
+MOV10D560KKTR
+*STM RV
+*NGS
+*PLB 1="1" 2="2"
+*MXP 2
+*DFN MOV-10D560KKTR
+~!Mouser Part Number (652-MOV-10D560KKTR)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Bourns/MOV-10D560KKTR?qs=ST9lo4GX8V2czT1yMnlPDw%3D%3D)
+~!Manufacturer_Name (Bourns)
+~!Manufacturer_Part_Number (MOV-10D560KKTR)
+~!Link Datasheet (https://www.bourns.com/docs/product-datasheets/mov10d.pdf)
+~!Height (17.5mm)
+~!3D_Model (MOV-10D560KKTR)
+MOV-10D560KKTR
+1.1!U 2.1!U 

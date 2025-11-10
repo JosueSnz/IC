@@ -1,0 +1,9 @@
+Manufacturer=Amphenol
+PartNumber=YK4410303000G
+PartCategory=Connector
+PackageCategory=Other
+PinCount=3
+Version=2.4
+Released=2020-06-12 16:56:29
+Downloaded=2025-11-01 01:12:01
+3D=Y

@@ -1,0 +1,9 @@
+Manufacturer=Bourns
+PartNumber=SRN3015-2R2M
+PartCategory=Inductor
+PackageCategory=Inductors Precision Moulded
+PinCount=2
+Version=1.1
+Released=2016-07-25 12:15:56
+Downloaded=2025-10-31 13:01:46
+3D=Y

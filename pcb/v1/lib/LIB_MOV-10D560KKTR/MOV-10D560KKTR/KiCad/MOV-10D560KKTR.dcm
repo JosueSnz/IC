@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MOV-10D560KKTR
+D VARISTOR, MOV, 110V, DISC 10MM
+K
+F https://www.bourns.com/docs/product-datasheets/mov10d.pdf
+$ENDCMP
+#
+#End Doc Library

@@ -1,0 +1,9 @@
+Manufacturer=Bourns
+PartNumber=MOV-10D560KKTR
+PartCategory=Varistor
+PackageCategory=Other
+PinCount=2
+Version=3.5
+Released=2023-12-01 09:57:19
+Downloaded=2025-11-01 01:25:00
+3D=Y

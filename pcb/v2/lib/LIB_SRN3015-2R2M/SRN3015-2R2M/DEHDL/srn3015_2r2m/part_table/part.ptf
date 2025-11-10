@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'SRN3015_2R2M'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Bourns", "SRN3015-2R2M" (!) = "", "INDPM3027X150L", "Inductors Precision Moulded", "652-SRN3015-2R2M", "https://www.mouser.co.uk/ProductDetail/Bourns/SRN3015-2R2M?qs=opBjA1TV9012ipbB8adgog%3D%3D", "Power Inductor semi-shielded SMD 2.2uH Bourns SRN3015 Series Shielded Wire-wound SMD Inductor with a Ferrite Core, 2.2 uH +/-20% 1.8A Idc", "", "1.5 mm"
+END_PART
+
+END.

@@ -1,0 +1,16 @@
+.SRN6045TA-150M :1 ;BOURNS - SRN6045TA-150M - INDUCTOR, AEC-Q200, 15UH, 2.8A, 20%
+INDC6060X450N
+*STM L
+*NGS
+*PLB 1="1" 2="2"
+*MXP 2
+*DFN SRN6045TA-150M
+~!Mouser Part Number (652-SRN6045TA-150M)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Bourns/SRN6045TA-150M?qs=Vt59ZOdFuWZ6Cpgfuuda%2Fg%3D%3D)
+~!Manufacturer_Name (Bourns)
+~!Manufacturer_Part_Number (SRN6045TA-150M)
+~!Link Datasheet (https://componentsearchengine.com/Datasheets/2/SRN6045TA-150M.pdf)
+~!Height (4.5mm)
+~!3D_Model (SRN6045TA-150M)
+SRN6045TA-150M
+1.1!U 2.1!U 

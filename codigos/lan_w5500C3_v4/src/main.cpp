@@ -7,6 +7,24 @@
 EthernetClient client;
 PubSubClient pclient(client);
 
+// alfa= (2pi*fc)/fa considerando fa= 10kHz e fc= 10Hz temos alfa= 0.006283
+// considerando a freq de Nyquist fs/2= 5kHz filtro rc para atenuar isso
+// fc para o filtro 159Hz 0.006283f
+// C= 100nF e R= 10kOhm
+
+#define alvo 6.283185307179586476925286766559e-4f
+unsigned long tempo_ultimo= 0;
+unsigned long tempo_atual= 0;
+const long tempo_amostra= 1020; 
+
+float f1 = 0.0;
+float f2 = 0.0;
+
+unsigned ant_raw= 0;
+float tensao= 0;
+float ma= 0;
+float corrente= 0;
+
 void reconnect() {
   while (!client.connected()) {
     Serial.print("Tentando conexao MQTT...");
@@ -27,11 +45,9 @@ void setup() {
   Ethernet.init(7);
 
   Serial.begin(115200);
-  // while (!Serial) {
-  //   ; // Apenas para teste
-  // }
   Serial.println("Iniciando");
   pclient.setServer(mqttServer, mqttPort);
+  pclient.setKeepAlive(20);
 
   // podemos usar o Ethernet.begin(mac, ip, eth_DNS, gateway, subnet);
   Ethernet.begin(mac);
@@ -49,11 +65,16 @@ void setup() {
   Serial.print("Micro IP: ");
   Serial.println(Ethernet.localIP());
 
-  delay(200);
   pinMode(1, INPUT);
   pinMode(8, OUTPUT);
   //LED feedback
   digitalWrite(8, LOW);
+
+  // coleta inicial do filtro
+  ant_raw= analogRead(1);
+  f1= (float)ant_raw;
+  f2= (float)ant_raw;
+  delay(200);
 }
 
 void loop() {
@@ -63,31 +84,35 @@ void loop() {
   }
   pclient.loop();
 
-  int sensorReading = analogRead(1);
-  float tensao = (3.3 / 4095.0) * sensorReading; // sem correcao * 0.766665
-  float corrente = (62.5 * tensao) - 75; 
+  ant_raw = analogRead(1);
 
-  char jsonBuffer[256]; 
-  int len = snprintf(jsonBuffer, sizeof(jsonBuffer), "{ \"tensao_medida\": %.4f, \"valor_analogico\": %d, \"corrente_medida\": %.4f }",tensao, sensorReading, corrente);
+  f1= (1.0f-alvo)*f1+(alvo*(float)ant_raw);
+  f2= (1.0f-alvo)*f2+(alvo*f1);
 
-  if (len < 0 || len >= sizeof(jsonBuffer)) {
-    Serial.println("ERRO: Buffer JSON muito pequeno ou falha na formatação.");
+  tempo_atual= millis();
+  
+  if(tempo_atual-tempo_ultimo>=tempo_amostra){
+    tempo_ultimo= tempo_atual;
+
+    tensao= (-7.64657683830495e-9*(f2*f2))+(0.000757649355681322*f2)-0.0324144578988855; 
+    //Serial.println(tensao, 4);
+    ma= (tensao/97.56)*1000;
+    corrente= (ma*6.25)-75; 
+    //Serial.println(corrente);   
+
+    char jsonBuffer[256]; 
+    int len = snprintf(jsonBuffer, sizeof(jsonBuffer), "{ \"tensao_medida\": %.4f, \"valor_analogico\": %.4f, \"corrente_medida\": %.4f }",tensao, f2, corrente);
+
+    if (len < 0 || len >= sizeof(jsonBuffer)) {
+      Serial.println("ERRO: Buffer JSON muito pequeno ou falha na formatação.");
+    }
+    if (pclient.publish(mqttTopic, jsonBuffer)) {
+      Serial.print("Publicado: ");
+      Serial.println(jsonBuffer);
+    } else {
+      Serial.print("Falha ao publicar. Estado: ");
+      Serial.println(pclient.state());
+    }
+    delay(10);
   }
-
-  // String jsonData = "{";
-  // jsonData += "\"tensao_medida\": " + String(tensao, 4) + ", ";
-  // jsonData += "\"valor_analogico\": " + String(sensorReading) + ", ";
-  // jsonData += "\"corrente_medida\": " + String(corrente, 4);
-  // jsonData += "}";
-
-  if (pclient.publish(mqttTopic, jsonBuffer)) {
-    Serial.print("Publicado: ");
-    Serial.println(jsonBuffer);
-  } else {
-    Serial.print("Falha ao publicar. Estado: ");
-    Serial.println(pclient.state());
-  }
-
-  //evita sobrecarregar a rede, 900ms para tentar bater os 1hz com margem 
-  delay(900); 
 }

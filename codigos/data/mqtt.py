@@ -4,7 +4,9 @@ import sqlite3
 from datetime import datetime
 import time
 
-MQTT_BROKER_HOST = "broker.hivemq.com" 
+## broker.hivemq.com
+
+MQTT_BROKER_HOST = "test.mosquitto.org" 
 MQTT_PORT = 1883
 MQTT_TOPIC = "UNIFEI/EE/LABTEL/DADOS_JSON"
 CLIENT_ID = "banco"
@@ -20,7 +22,7 @@ def setup_database():
         CREATE TABLE IF NOT EXISTS leituras (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             timestamp DATETIME NOT NULL,
-            valor_analogico INTEGER,
+            valor_analogico REAL,
             tensao_medida REAL,
             corrente_medida REAL
         )

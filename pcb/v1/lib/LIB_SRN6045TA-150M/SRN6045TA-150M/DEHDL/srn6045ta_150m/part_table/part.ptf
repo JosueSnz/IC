@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'SRN6045TA_150M'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Bourns", "SRN6045TA-150M" (!) = "", "INDC6060X450N", "Inductors Chip", "652-SRN6045TA-150M", "https://www.mouser.co.uk/ProductDetail/Bourns/SRN6045TA-150M?qs=Vt59ZOdFuWZ6Cpgfuuda%2Fg%3D%3D", "BOURNS - SRN6045TA-150M - INDUCTOR, AEC-Q200, 15UH, 2.8A, 20%", "https://componentsearchengine.com/Datasheets/2/SRN6045TA-150M.pdf", "4.5 mm"
+END_PART
+
+END.

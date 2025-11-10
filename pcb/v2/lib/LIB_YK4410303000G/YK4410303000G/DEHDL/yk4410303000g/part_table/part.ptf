@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'YK4410303000G'
+CLASS = IO
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Amphenol", "YK4410303000G" (!) = "", "YK4410303000G", "Other", "649-YK44103030J0G", "https://www.mouser.co.uk/ProductDetail/Amphenol-Anytek/YK4410303000G?qs=Mv7BduZupUjlRBXbQE4gEA%3D%3D", "3 Circuit 0.374" (9.50mm) Barrier Block Connector Screws with Captive Plate", "http://www.anytek.com.tw/UserUpFiles/20170613/GymcEQdigCSS.pdf", "14.5 mm"
+END_PART
+
+END.
