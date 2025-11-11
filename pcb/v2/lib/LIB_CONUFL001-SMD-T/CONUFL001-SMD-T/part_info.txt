@@ -1,0 +1,9 @@
+Manufacturer=TE Connectivity
+PartNumber=CONUFL001-SMD-T
+PartCategory=Connector
+PackageCategory=Other
+PinCount=3
+Version=4.1
+Released=2023-07-24 03:23:03
+Downloaded=2025-11-10 23:46:33
+3D=Y
